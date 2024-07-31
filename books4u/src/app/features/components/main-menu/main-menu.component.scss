@@ -1,0 +1,46 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 60%;
+  justify-content: space-around;
+}
+
+.short-card {
+  width: 400px;
+  height: 250px;
+  border: 2px solid #3F51B5;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  color: #3F51B5;
+  font-size: large;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.short-card:hover {
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.img {
+  margin-bottom: 10px;
+}
+
+.book-img {
+  height: 80px;
+  width: 80px;
+}
