@@ -1,6 +1,6 @@
 <main class="menu">
   <div class="nav">
-    <div class="short-card">
+    <div class="short-card" (click)="navigateTo(APP_BASE_ROUTES.REGISTER_BOOK)">
       <div class="img">
         <img
           class="book-img"
@@ -11,7 +11,7 @@
       </div>
       <span>Cadastrar Livro</span>
     </div>
-    <div class="short-card">
+    <div class="short-card" (click)="navigateTo(APP_BASE_ROUTES.BOOKS_SEARCH)">
       <div class="img">
         <img
           class="book-img"
@@ -21,7 +21,7 @@
       </div>
       <span>Pesquisar por Livros</span>
     </div>
-    <div class="short-card">
+    <div class="short-card" (click)="navigateTo(APP_BASE_ROUTES.LOANS)">
       <div class="img">
         <img
           class="book-img"
