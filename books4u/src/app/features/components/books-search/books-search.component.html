@@ -2,19 +2,43 @@
   <table mat-table [dataSource]="books" class="mat-elevation-z8">
     <!-- Title Column -->
     <ng-container matColumnDef="title">
-      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <th mat-header-cell *matHeaderCellDef>Título</th>
       <td mat-cell *matCellDef="let book">{{ book.title }}</td>
     </ng-container>
 
-    <!-- Author Column -->
-    <ng-container matColumnDef="author">
-      <th mat-header-cell *matHeaderCellDef>Author</th>
-      <td mat-cell *matCellDef="let book">{{ book.author }}</td>
+    <!-- Publisher Column -->
+    <ng-container matColumnDef="publisher">
+      <th mat-header-cell *matHeaderCellDef>Editora</th>
+      <td mat-cell *matCellDef="let book">{{ book.publisher.name }}</td>
+    </ng-container>
+
+    <!-- Bookcase Column -->
+    <ng-container matColumnDef="bookcase">
+      <th mat-header-cell *matHeaderCellDef>Estante</th>
+      <td mat-cell *matCellDef="let book">
+        {{ book.bookLocalization.bookcase }}
+      </td>
+    </ng-container>
+
+      <!-- Shelf Column -->
+      <ng-container matColumnDef="shelf">
+        <th mat-header-cell *matHeaderCellDef>Prateleira</th>
+        <td mat-cell *matCellDef="let book">
+          {{ book.bookLocalization.shelf }}
+        </td>
+      </ng-container>
+
+    <!-- Authors Column -->
+    <ng-container matColumnDef="authors">
+      <th mat-header-cell *matHeaderCellDef>Autores</th>
+      <td mat-cell *matCellDef="let book">
+        {{ getAuthors(book.authors) }}
+      </td>
     </ng-container>
 
     <!-- Actions Column -->
     <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef class="actions-column">Actions</th>
+      <th mat-header-cell *matHeaderCellDef class="actions-column"></th>
       <td mat-cell *matCellDef="let book" class="actions-column">
         <mat-icon class="icon" color="primary">handshake</mat-icon>
         <mat-icon class="icon" color="primary">edit</mat-icon>

@@ -15,7 +15,7 @@ export class MainMenuComponent {
 
   APP_BASE_ROUTES = APP_BASE_ROUTES;
 
-  navigateTo(path: string) {
+  navigateTo(path: string): void {
     this.router.navigate([path]);
   }
 }
