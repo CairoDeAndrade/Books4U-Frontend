@@ -1,0 +1,27 @@
+.table-container {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 10dvh;
+}
+
+table {
+  width: 100%;
+}
+
+.actions-column {
+  text-align: right;
+  padding-right: 3dvw;
+}
+
+.actions-column > .icon {
+  margin-left: 0.7dvw;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .table-container {
+    width: 90%;
+  }
+}
+
