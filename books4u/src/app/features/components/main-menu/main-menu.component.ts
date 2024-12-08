@@ -11,11 +11,7 @@ import { RouterModule, Router } from '@angular/router';
   styleUrls: ['./main-menu.component.scss'],
 })
 export class MainMenuComponent {
-  constructor(private router: Router) {}
+  constructor(protected router: Router) {}
 
   APP_BASE_ROUTES = APP_BASE_ROUTES;
-
-  navigateTo(path: string): void {
-    this.router.navigate([path]);
-  }
 }
