@@ -22,4 +22,8 @@ export class LoanService {
       `${this.API_LOANS_BASE_URL}startDate/${formattedStartDate}/endDate/${formattedEndDate}`
     );
   }
+
+  returnLoan(id: number): Observable<any> {
+    return this.http.patch(`${this.API_LOANS_BASE_URL}return/${id}`, {});
+  }
 }

@@ -89,4 +89,20 @@ export class LoanComponent {
         });
     }
   }
+
+  returnLoan(id: number): void {
+    this.loanService.returnLoan(id).subscribe({
+      next: () => {
+        this.snackBar.open('Livro devolvido com sucesso!', '', {
+          duration: 5000,
+        });
+        this.fetchLoans();
+      },
+      error: () => {
+        this.snackBar.open('Erro ao devolver o livro!', '', {
+          duration: 3000,
+        });
+      },
+    });
+  }
 }
