@@ -1,0 +1,47 @@
+<mat-card class="card">
+  <mat-card-title class="title">Registro de Empréstimo</mat-card-title>
+  <mat-card-content class="content">
+    <form [formGroup]="loanForm">
+      <!-- Select Livro -->
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>Livro</mat-label>
+        <mat-select formControlName="book">
+          <mat-option *ngFor="let book of books" [value]="book.id">
+            {{ book.title }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Select Estudante -->
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>Estudante</mat-label>
+        <mat-select formControlName="student">
+          <mat-option *ngFor="let student of students" [value]="student.id">
+            {{ student.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Data de Início -->
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>Data de Início</mat-label>
+        <input matInput [matDatepicker]="startDatePicker" formControlName="startDate">
+        <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #startDatePicker></mat-datepicker>
+      </mat-form-field>
+
+      <!-- Data de Entrega -->
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>Data de Entrega</mat-label>
+        <input matInput [matDatepicker]="endDatePicker" formControlName="endDate">
+        <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #endDatePicker></mat-datepicker>
+      </mat-form-field>
+
+      <div class="button-container">
+        <button mat-stroked-button color="primary" (click)="router.navigate([APP_BASE_ROUTES.LOANS])">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
