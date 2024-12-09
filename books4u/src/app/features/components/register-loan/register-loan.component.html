@@ -17,7 +17,7 @@
         <mat-label>Estudante</mat-label>
         <mat-select formControlName="student">
           <mat-option *ngFor="let student of students" [value]="student.id">
-            {{ student.name }}
+            {{ student.fullname }}
           </mat-option>
         </mat-select>
       </mat-form-field>

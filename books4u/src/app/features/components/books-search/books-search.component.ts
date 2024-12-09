@@ -59,7 +59,7 @@ export class BooksSearchComponent {
         this.filteredBooks = [...this.books];
       },
       error: () => {
-        this.snackBar.open('Error loading books!', '', {
+        this.snackBar.open('Erro ao carregar livros!', '', {
           duration: 7000,
         });
       },
