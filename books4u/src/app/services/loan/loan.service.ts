@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Loan } from '../../model/loan/loan';
+import { LoanRequest } from '../../model/loan/loan-request';
 
 @Injectable({
   providedIn: 'root',
@@ -25,5 +26,9 @@ export class LoanService {
 
   returnLoan(id: number): Observable<any> {
     return this.http.patch(`${this.API_LOANS_BASE_URL}return/${id}`, {});
+  }
+
+  createLoan(request: LoanRequest): Observable<any> {
+    return this.http.post(this.API_LOANS_BASE_URL, request);
   }
 }
