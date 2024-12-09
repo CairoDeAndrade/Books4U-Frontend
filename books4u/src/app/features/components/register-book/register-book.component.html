@@ -1,0 +1,81 @@
+<mat-card class="card">
+  <mat-card-title class="title">Registro de Livro</mat-card-title>
+  <mat-card-content class="content">
+    <form [formGroup]="bookForm">
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>Título</mat-label>
+        <input matInput formControlName="title" placeholder="Título" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>CDD</mat-label>
+        <input matInput formControlName="CDD" placeholder="CDD" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>CDU</mat-label>
+        <input matInput formControlName="CDU" placeholder="CDU" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>CUTER</mat-label>
+        <input matInput formControlName="CUTER" placeholder="CUTER" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>Cópias</mat-label>
+        <input
+          type="number"
+          matInput
+          formControlName="copy"
+          placeholder="Quantidade de cópias"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>Gêneros</mat-label>
+        <mat-select formControlName="genresId" multiple>
+          <mat-option [value]="1"> Drama </mat-option>
+          <mat-option [value]="2"> Vida </mat-option>
+          <mat-option [value]="3"> Salvação </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>Editora</mat-label>
+        <mat-select formControlName="publisherId">
+          <mat-option [value]="1"> Editora Globo S/A </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>Localização</mat-label>
+        <mat-select formControlName="bookLocalizationId">
+          <mat-option [value]="1"> Estante: B Prateleira: 2 </mat-option>
+          <mat-option [value]="2"> Estante: C Prateleira: 1 </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="standard-width">
+        <mat-label>Autores</mat-label>
+        <mat-select formControlName="authorsIds" multiple>
+          <mat-option [value]="1"> Agatha Christie </mat-option>
+          <mat-option [value]="2"> Espirito Santo </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="button-container">
+        <button
+          mat-stroked-button
+          color="primary"
+          (click)="router.navigate([APP_BASE_ROUTES.BOOKS_SEARCH])"
+        >
+          Cancelar
+        </button>
+        <button mat-raised-button color="primary" (click)="onSubmit()">
+          Salvar
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -14,4 +14,8 @@ export class BookService {
   getBooks(): Observable<Book[]> {
     return this.http.get<Book[]>(this.API_BOOKS_BASE_URL);
   }
+
+  createBook(book: any): Observable<any> {
+    return this.http.post(this.API_BOOKS_BASE_URL, book);
+  }
 }
