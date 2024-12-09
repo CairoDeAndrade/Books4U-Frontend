@@ -1,0 +1,47 @@
+.table-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+}
+
+.actions-column {
+  text-align: right;
+  padding-right: 2vw;
+}
+
+.actions-column > .icon {
+  margin-left: 1vw;
+  cursor: pointer;
+
+  height: 4vh;
+  width: 2vw;
+  font-size: 1.8rem;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10vw;
+  margin-top: 3vw;
+  gap: 16px;
+}
+
+.filter-container > button {
+  margin-bottom: 3vh;
+}
+
+.mat-form-field {
+  width: 200px;
+}
+
+.register-loan {
+  margin-left: 35vw;
+}
+
